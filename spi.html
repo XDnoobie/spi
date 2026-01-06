@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinosaurus Care - Ultimate Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(180deg, #111827 0%, #1e3a8a 100%);
+        }
+
+        .section-paddock {
+            background-color: #0c4a6e; /* Deep ocean/river blue */
+        }
+
+        .section-diet {
+            background-color: #1e1b4b; /* Deep indigo */
+        }
+
+        .section-contact {
+            background-color: #0f172a;
+            background-image: radial-gradient(circle at 50% 50%, #1e3a8a 0%, #0f172a 100%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .form-input {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #22d3ee;
+            box-shadow: 0 0 15px rgba(34, 211, 238, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .spino-shadow {
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-link:hover {
+            background-color: white;
+            color: #0f172a;
+        }
+
+        /* Scanline animation effect for the contact section */
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgba(34, 211, 238, 0.1);
+            position: absolute;
+            animation: moveScanline 4s linear infinite;
+        }
+
+        @keyframes moveScanline {
+            0% { top: 0%; }
+            100% { top: 100%; }
+        }
+    </style>
+</head>
+<body class="text-white selection:bg-cyan-500">
+
+    <!-- Header -->
+    <header class="hero-gradient border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-cyan-600 rounded-full flex items-center justify-center">
+                    <svg viewBox="0 0 100 100" class="w-8 h-8 fill-white">
+                        <path d="M10 80 Q 50 10 90 80 Z" />
+                    </svg>
+                </div>
+                <span class="text-2xl font-black tracking-tighter uppercase italic">SpinoCare</span>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#paddock" class="nav-link px-4 py-2 border border-white/20 rounded transition">Paddock</a>
+                <a href="#diet" class="nav-link px-4 py-2 border border-white/20 rounded transition">Diet</a>
+                <a href="#contact" class="nav-link px-4 py-2 border border-white/20 rounded transition">Contact</a>
+            </nav>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="max-w-7xl mx-auto px-6 py-16 text-center">
+            <!-- New Spinosaurus Image Placeholder -->
+            <div class="mb-12 relative inline-block group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <div class="relative bg-slate-900 border border-white/10 rounded-2xl overflow-hidden spino-shadow">
+                    <img 
+                        src="image.png" 
+                        alt="Spinosaurus illustration placeholder" 
+                        class="w-full max-w-3xl h-auto opacity-80"
+                    >
+                    <!-- Overlay SVG Icon for visual interest -->
+                    <div class="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
+                         <svg viewBox="0 0 100 100" class="w-64 h-64 fill-white">
+                            <path d="M10 80 Q 50 10 90 80 Z" />
+                        </svg>
+                    </div>
+                </div>
+                <p class="mt-4 text-xs uppercase tracking-[0.3em] text-cyan-500/60">Specimen ID: SORNA-7-S</p>
+            </div>
+
+            <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tighter uppercase">The River King</h1>
+            <p class="text-xl md:text-2xl text-cyan-200 max-w-2xl mx-auto font-light leading-relaxed">
+                Owning a 15-meter semi-aquatic theropod is a big responsibility. Here is how to keep your Spinosaurus Aegyptiacus thriving.
+            </p>
+            <div class="mt-10">
+                <a href="#paddock" class="inline-block bg-white text-blue-900 px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition transform">Begin Setup</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Paddock Section -->
+    <section id="paddock" class="section-paddock py-24 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-5xl font-black mb-8 uppercase tracking-tight">The Enclosure</h2>
+                <div class="space-y-6 text-lg text-blue-50">
+                    <p class="leading-relaxed">
+                        A standard backyard won't cut it. You need a <strong>Semi-Aquatic Bio-Dome</strong>. 
+                    </p>
+                    <div class="glass-card p-6 rounded-2xl">
+                        <h3 class="text-xl font-bold mb-3 text-cyan-300">Required Specifications:</h3>
+                        <ul class="list-disc list-inside space-y-2 text-sm md:text-base">
+                            <li>Minimum 2-acre deep-water river system</li>
+                            <li>Reinforced concrete embankments (Level 5 Security)</li>
+                            <li>Basking banks with silt and soft mud</li>
+                            <li>High-intensity UV heating arrays for sail thermoregulation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -inset-4 bg-cyan-400/20 blur-3xl rounded-full"></div>
+                <img src="{6D4E30A8-389B-4A4D-AC87-E4B62C65752F}.png" alt="Paddock Design" class="relative rounded-3xl spino-shadow object-cover w-full aspect-square border-4 border-white/10">
+            </div>
+        </div>
+    </section>
+
+    <!-- Diet Section -->
+    <section id="diet" class="section-diet py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-black uppercase tracking-tight mb-4">Feeding the Giant</h2>
+                <p class="text-indigo-200">Spinosaurus is primarily a piscivore, but don't let that fool you.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Fish Card -->
+                <div class="glass-card p-8 rounded-3xl border-t-4 border-cyan-400">
+                    <div class="text-4xl mb-4">🐟</div>
+                    <h3 class="text-2xl font-bold mb-4">Primary: Large Fish</h3>
+                    <p class="text-gray-300">Think Mawsonia or large Lungfish. Your Spino needs roughly 500kg of fresh catch daily.</p>
+                </div>
+                <!-- Supplement Card -->
+                <div class="glass-card p-8 rounded-3xl border-t-4 border-indigo-400">
+                    <div class="text-4xl mb-4">🐊</div>
+                    <h3 class="text-2xl font-bold mb-4">Occasional: Crocs</h3>
+                    <p class="text-gray-300">Small crocodilians provide necessary calcium for that massive skeletal sail.</p>
+                </div>
+                <!-- Warning Card -->
+                <div class="glass-card p-8 rounded-3xl border-t-4 border-red-500">
+                    <div class="text-4xl mb-4">🚫</div>
+                    <h3 class="text-2xl font-bold mb-4">Warning: Humans</h3>
+                    <p class="text-gray-300">Do not hand-feed. Spinosaurus has a conical tooth structure designed for grip, not release.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Messaging/Contact Section -->
+    <section id="contact" class="section-contact py-24 px-6 relative overflow-hidden">
+        <div class="scanline"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-black uppercase tracking-tight mb-4">Signal the Facility</h2>
+                <p class="text-cyan-400 font-mono text-sm tracking-widest uppercase">Encrypted Transmission Required</p>
+            </div>
+
+            <div class="glass-card p-8 md:p-12 rounded-3xl spino-shadow">
+                <form id="contactForm" class="space-y-6" onsubmit="event.preventDefault(); handleSubmission();">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-cyan-300 mb-2">Identifier</label>
+                            <input type="text" id="name" placeholder="Agent / Researcher Name" class="form-input w-full px-4 py-3 rounded-xl" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-cyan-300 mb-2">Subject</label>
+                            <select id="subject" class="form-input w-full px-4 py-3 rounded-xl appearance-none">
+                                <option>Paddock Structural Breach</option>
+                                <option>Habitat Maintenance Request</option>
+                                <option>Health & Medical Alert</option>
+                                <option>General Inquiry</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-widest text-cyan-300 mb-2">Transmission Body</label>
+                        <textarea id="message" rows="5" placeholder="Enter message details..." class="form-input w-full px-4 py-3 rounded-xl" required></textarea>
+                    </div>
+
+                    <div id="statusMessage" class="hidden p-4 rounded-xl text-center text-sm font-bold uppercase tracking-widest border"></div>
+
+                    <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-400 text-blue-950 font-black uppercase tracking-widest py-4 rounded-xl transition transform active:scale-95">
+                        Send Encrypted Signal
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Care Footer -->
+    <footer class="bg-black py-20 px-6 border-t border-white/10">
+        <div class="max-w-3xl mx-auto text-center">
+            <div class="inline-block p-4 rounded-full bg-red-900/30 border border-red-500/50 mb-8">
+                <p class="text-red-400 font-bold uppercase tracking-widest text-sm">Emergency Protocol</p>
+            </div>
+            <h2 class="text-4xl font-black mb-6">If the Paddock Fails...</h2>
+            <p class="text-gray-400 mb-10 leading-relaxed">
+                Stay away from deep water. Though the Spinosaurus can run on land, it is an apex predator in the water. 
+                Contact your local InGen recovery team immediately.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="text-gray-500 hover:text-white transition">Privacy Policy</a>
+                <span class="text-gray-800">|</span>
+                <a href="#" class="text-gray-500 hover:text-white transition">Jurassic Terms</a>
+            </div>
+            <p class="mt-8 text-xs text-gray-600">© 2026 Cretaceous Care Solutions. All fossilized rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubmission() {
+            const status = document.getElementById('statusMessage');
+            const form = document.getElementById('contactForm');
+            
+            status.classList.remove('hidden', 'bg-red-500/20', 'border-red-500', 'text-red-300', 'bg-green-500/20', 'border-green-500', 'text-green-300');
+            
+            // Simulating a successful signal transmission
+            status.classList.add('bg-green-500/20', 'border-green-500', 'text-green-300');
+            status.textContent = "Signal Authenticated. Transmission received by Facility Site B.";
+            status.classList.remove('hidden');
+            
+            form.reset();
+            
+            setTimeout(() => {
+                status.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
